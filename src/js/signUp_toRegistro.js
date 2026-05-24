@@ -1,3 +1,21 @@
+const btnSignUp =
+    document.getElementById("btnSignUp");
+
+// =========================
+// EVENTO REGISTRO
+// =========================
+
+btnSignUp.addEventListener(
+    "click",
+
+    () => {
+
+        saveRegisteredUser();
+
+    }
+
+);
+
 function saveRegisteredUser() {
 
     // =========================
@@ -150,6 +168,22 @@ function saveRegisteredUser() {
         JSON.stringify(users)
     );
 
+    // =========================
+    // USER NOW
+    // =========================
+
+    // El usuario queda
+    // autenticado automáticamente
+
+    localStorage.setItem(
+
+        "userNow",
+
+        JSON.stringify(newUser)
+
+    );
+
+
 
     // =========================
     // MENSAJE
@@ -157,7 +191,14 @@ function saveRegisteredUser() {
 
     alert("Usuario registrado correctamente");
 
-}
+    // =========================
+    // REDIRECCIÓN
+    // =========================
+
+    window.location.href =
+        "irAPagar.html";
+
+    }
 
 export {
     saveRegisteredUser

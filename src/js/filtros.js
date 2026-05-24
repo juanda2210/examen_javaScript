@@ -57,21 +57,243 @@ document.addEventListener("click", (event) => {
         // ROOM ID
         // =========================
 
+        // Tomamos el id de la
+        // habitación seleccionada
+
         const roomId =
             event.target.dataset.id;
+
+
+
+
+        // =========================
+        // AVAILABILITY
+        // =========================
+
+        // Tomamos todas las habitaciones
+        // disponibles desde localStorage
+
+        const availability =
+            JSON.parse(
+                localStorage.getItem(
+                    "availability"
+                )
+            ) || [];
+
+
+
+
+        // =========================
+        // ROOM FOUND
+        // =========================
+
+        // Buscamos la habitación
+        // que coincida con el id
+        // del botón al que el
+        // usuario le dio reservar
+
+        const roomFound =
+            availability.find(room =>
+
+                room.id == roomId
+
+            );
+
+
+
+
+        // =========================
+        // VALIDAR HABITACIÓN
+        // =========================
+
+        // Si no encontramos
+        // la habitación detenemos
+        // todo el proceso
+
+        if (!roomFound) {
+
+            alert(
+                "Habitación no encontrada"
+            );
+
+            return;
+
+        }
+
+
+
+
+        // =========================
+        // FECHAS
+        // =========================
+
+        // Tomamos las fechas
+        // seleccionadas por
+        // el usuario
+
+        const checkIn =
+            fechaCheckIn.value;
+
+        const checkOut =
+            fechaCheckOut.value;
+
+
+
+
+        // =========================
+        // DATE OBJECTS
+        // =========================
+
+        // Convertimos los strings
+        // de fecha en objetos Date
+        // para poder calcular
+        // la diferencia de días
+
+        const dateCheckIn =
+            new Date(checkIn);
+
+        const dateCheckOut =
+            new Date(checkOut);
+
+
+
+
+        // =========================
+        // DIFERENCIA
+        // =========================
+
+        // Calculamos la diferencia
+        // entre ambas fechas
+        // en milisegundos
+
+        const differenceMs =
+            dateCheckOut -
+            dateCheckIn;
+
+
+
+
+        // =========================
+        // NOCHES
+        // =========================
+
+        // Convertimos la diferencia
+        // de milisegundos a días
+
+        const nights =
+            differenceMs /
+            (1000 * 60 * 60 * 24);
+
+
+
+
+        // =========================
+        // TOTAL PRICE
+        // =========================
+
+        // Multiplicamos
+        // cantidad de noches
+        // por el precio de la habitación
+
+        const totalPrice =
+            nights *
+            roomFound.precio;
+
+
+
+
+        // =========================
+        // PRE RESERVATION
+        // =========================
+
+        // Creamos un objeto
+        // con TODA la información
+        // necesaria para el pago
+
+        const preReservation = {
+
+            // =========================
+            // ROOM DATA
+            // =========================
+
+            id:
+                roomFound.id,
+
+            roomType:
+                roomFound.tipo,
+
+            description:
+                roomFound.descripcion,
+
+            location:
+                roomFound.ubicacion,
+
+            services:
+                roomFound.servicios,
+
+            nightPrice:
+                roomFound.precio,
+
+
+            // =========================
+            // RESERVATION DATA
+            // =========================
+
+            fechaCheckIn:
+                checkIn,
+
+            fechaCheckOut:
+                checkOut,
+
+            nights,
+
+            totalPrice
+
+        };
+
+
+
+
+        // =========================
+        // GUARDAR PRE RESERVA
+        // =========================
+
+        // Guardamos TODA la
+        // información temporal
+        // de la reserva
+
+        localStorage.setItem(
+
+            "preReservation",
+
+            JSON.stringify(preReservation)
+
+        );
+
+
 
 
         // =========================
         // USER NOW
         // =========================
 
+        // Verificamos si hay
+        // un usuario autenticado
+
         const userNow =
-            localStorage.getItem("userNow");
+            localStorage.getItem(
+                "userNow"
+            );
+
+
 
 
         // =========================
         // VALIDACIÓN
         // =========================
+
+        // Si existe userNow
+        // enviamos a pagar
 
         if (userNow) {
 
@@ -80,6 +302,15 @@ document.addEventListener("click", (event) => {
 
         }
 
+
+
+
+        // =========================
+        // NO HAY SESIÓN
+        // =========================
+
+        // Si no hay usuario
+        // enviamos al registro
 
         else {
 

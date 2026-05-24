@@ -1,6 +1,6 @@
 import { 
     saveRegisteredUser,
- } from "./signUp.js";
+ } from "./signUp_toRegistro.js";
 
  import {
     verifCredentials,
