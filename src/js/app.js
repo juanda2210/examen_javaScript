@@ -235,7 +235,6 @@ const userNow =
 
 
 
-
 inicializarUsersDefault();
 inicializarRoomsDefault();
 inicializarAvailability();
