@@ -59,23 +59,24 @@ class ContactPage extends HTMLElement {
                        <div>
                          <h3>WhatsApp</h3>
                          <p>+57 320 654 8891</p>
+                        </div>
                 </div>
+                <div class="contact-card">
+
+                        <span class="contact-icon">
+                        ✉️
+                        </span>
+
+                        <div>
+                            <h3>Correo electrónico</h3>
+                            <p>reservas@rincondelcarmen.com</p>
+                        </div>
+
                 </div>
             </section>
 
 
-                <div class="contact-card">
 
-                    <span class="contact-icon">
-                        ✉️
-                    </span>
-
-                    <div>
-                        <h3>Correo electrónico</h3>
-                        <p>reservas@rincondelcarmen.com</p>
-                    </div>
-
-                </div>
 
             </section>
 

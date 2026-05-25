@@ -210,14 +210,125 @@ function inicializarAvailability() {
     }
 }
 
+// =========================
+// HERO BUTTONS
+// =========================
+
+const heroButtons =
+    document.querySelector(
+        ".heroButtons"
+    );
+
+
+
+
+// =========================
+// USER NOW
+// =========================
+
+const userNow =
+    JSON.parse(
+        localStorage.getItem(
+            "userNow"
+        )
+    );
+
+
 
 
 inicializarUsersDefault();
 inicializarRoomsDefault();
 inicializarAvailability();
+renderUserButtons();
 
 
 
+
+
+
+// =========================
+// RENDER USER
+// =========================
+
+function renderUserButtons() {
+
+    // =========================
+    // VALIDAR USER
+    // =========================
+
+    // Si no hay sesión
+    // detenemos el proceso
+
+    if (!userNow) {
+
+        return;
+
+    }
+
+
+
+
+    // =========================
+    // RENDER USER CONTAINER
+    // =========================
+
+    heroButtons.innerHTML = `
+
+        <div class="userContainer">
+
+            <p class="userGreeting">
+
+                Hola,
+                ${userNow.fullName}
+
+            </p>
+
+
+            <div class="userButtons">
+
+
+                <!-- =========================
+                     ADMIN PANEL
+                ========================== -->
+
+                ${userNow.role === "admin"
+
+                    ?
+
+                    `
+
+                    <button id="btnAdminPanel">
+
+                        Admin
+
+                    </button>
+
+                    `
+
+                    :
+
+                    ""
+
+                }
+
+
+                <!-- =========================
+                     LOGOUT
+                ========================== -->
+
+                <button id="btnLogOut">
+
+                    Cerrar sesión
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
 
 
 // =========================
@@ -253,3 +364,39 @@ btnLocation.addEventListener(
 
 );
 
+
+// =========================
+// EVENTOS USER
+// =========================
+
+document.addEventListener("click", (event) => {
+
+    // =========================
+    // LOG OUT
+    // =========================
+
+    if (event.target.id === "btnLogOut") {
+
+        localStorage.removeItem(
+            "userNow"
+        );
+
+        window.location.reload();
+
+    }
+
+
+
+
+    // =========================
+    // ADMIN PANEL
+    // =========================
+
+    if (event.target.id === "btnAdminPanel") {
+
+        window.location.href =
+            "admin.html";
+
+    }
+
+});
