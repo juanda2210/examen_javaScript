@@ -526,6 +526,15 @@ function renderReservations() {
 
                     </button>
 
+                    <button
+                        class="generarFactura"
+                        data-index="${index}"
+                    >
+
+                        Generar factura
+
+                    </button>
+
                 </div>
 
             </div>
@@ -724,6 +733,43 @@ document.addEventListener("click", (event) => {
         cancelReservations(index);
 
     }
+
+    if ( event.target.classList.contains("generarFactura")) {
+        const index = event.target.dataset.index;
+
+        const confirmation = confirm ("Estas seguro de que deseas generar factura de esta reservacion?")
+    }
+
+    if (!confirmation) {
+        return;
+    }
+
+    const reservations =
+        JSON.parse(
+            localStorage.getItem("reservations")
+        ) || [];
+
+
+    // =========================
+    // RESERVATION
+    // =========================
+
+    const newFactura = {
+        clientName : reservations[index].clientName,
+        identification : reservations[index].identification,
+        roomType : reservations[index].roomType,
+        fechaCheckIn : reservations[index].fechaCheckIn,
+        fechaCheckOut : reservations[index].fechaCheckOut,
+        nightPrice : reservations[index].nightPrice,
+        totalPrice : reservations[index].totalPrice
+    }
+
+    const factura = getItem(localStorage.factura)
+
+    factura.push(newFactura);
+
+    localStorage.setItem("reservations", JSON.stringify(factura))
+    window.location.href = facturacion.html;
 
 
 
