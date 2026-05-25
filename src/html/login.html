@@ -21,7 +21,7 @@
     ========================== -->
 
     <title>
-        Confirmar Reservación | Rincón del Carmen
+        Iniciar sesión
     </title>
 
 
@@ -53,62 +53,87 @@
 
 <body>
 
-
     <!-- ======================================================
-        PAYING PAGE
+        LOGIN SECTION
     ======================================================= -->
 
-    <main class="payingPage">
+    <section class="loginSection">
 
 
         <!-- =========================
-            PAYING CARD
+            LOGIN CARD
         ========================== -->
 
-        <section class="payingCard">
+        <article class="loginCard">
 
 
             <!-- =========================
                 TITLE
             ========================== -->
 
-            <h1 class="payingTitle">
-
-                Confirmar Reservación
-
+            <h1>
+                Inicia sesión
             </h1>
 
 
-            <!-- =========================
-                DESCRIPTION
-            ========================== -->
-
-            <p class="payingDescription">
-
-                Revisa cuidadosamente toda la información
-                antes de confirmar y finalizar tu reservación.
-
+            <p>
+                Ingresa tus credenciales
+                para acceder a tu cuenta
             </p>
 
 
+
+
+
             <!-- =========================
-                RESERVATION DATA
+                INPUT IDENTIFICATION
             ========================== -->
 
-            <div
-                class="reservationData"
-                id="reservationData"
+            <input
+
+                type="text"
+
+                id="idSignIn"
+
+                placeholder="Identificación"
+
             >
 
-                <!-- =========================
-                    paying.js renderiza aquí
-                ========================== -->
 
-            </div>
 
-        </section>
 
-    </main>
+
+            <!-- =========================
+                INPUT PASSWORD
+            ========================== -->
+
+            <input
+
+                type="password"
+
+                id="passSignIn"
+
+                placeholder="Contraseña"
+
+            >
+
+
+
+
+
+            <!-- =========================
+                BTN SIGN IN
+            ========================== -->
+
+            <button id="btnSignIn_dos">
+
+                Iniciar sesión
+
+            </button>
+
+        </article>
+
+    </section>
 
 
 
@@ -119,8 +144,7 @@
     ======================================================= -->
 
     <script
-        type="module"
-        src="../js/paying.js"
+        src="../js/signIn.js"
     ></script>
 
 </body>

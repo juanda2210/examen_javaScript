@@ -1,16 +1,75 @@
-const btnSignUp =
-    document.getElementById("btnSignUp");
+const btnSignUp_dos =
+    document.getElementById("btnSignUp_dos");
 
 // =========================
 // EVENTO REGISTRO
 // =========================
 
-btnSignUp.addEventListener(
+btnSignUp_dos.addEventListener(
+
     "click",
 
     () => {
 
+        // ======================================================
+        // REGISTRAR USUARIO
+        // ======================================================
+
+        // Guardamos el usuario
+        // dentro de localStorage
+
         saveRegisteredUser();
+
+
+
+
+        // ======================================================
+        // PRE RESERVATION
+        // ======================================================
+
+        // Verificamos si existe
+        // una pre reservación
+
+        const preReservation =
+            localStorage.getItem(
+                "preReservation"
+            );
+
+
+
+
+        // ======================================================
+        // VALIDACIÓN
+        // ======================================================
+
+        // Si existe una
+        // pre reservación
+        // enviamos a pagar
+
+        if (preReservation) {
+
+            redirectionToPaying();
+
+        }
+
+
+
+
+        // ======================================================
+        // NO PRE RESERVATION
+        // ======================================================
+
+        // Si NO existe una
+        // pre reservación
+        // enviamos al panel
+        // del cliente
+
+        else {
+
+            window.location.href =
+                "client.html";
+
+        }
 
     }
 
@@ -191,15 +250,58 @@ function saveRegisteredUser() {
 
     alert("Usuario registrado correctamente");
 
-    // =========================
-    // REDIRECCIÓN
-    // =========================
+}
 
-    window.location.href =
-        "irAPagar.html";
+// ======================================================
+// REDIRECTION TO PAYING
+// ======================================================
+
+function redirectionToPaying() {
+
+    // ======================================================
+    // USER NOW
+    // ======================================================
+
+    // Verificamos si existe
+    // un usuario autenticado
+
+    const userNow =
+        localStorage.getItem(
+            "userNow"
+        );
+
+
+
+
+    // ======================================================
+    // VALIDACIÓN
+    // ======================================================
+
+    // Si existe userNow
+    // redireccionamos
+
+    if (userNow) {
+
+        window.location.href =
+            "irAPagar.html";
 
     }
 
-export {
-    saveRegisteredUser
+
+
+
+    // ======================================================
+    // NO USER
+    // ======================================================
+
+    // Si no existe
+    // detenemos el proceso
+
+    else {
+
+        return;
+
+    }
+
 }
+

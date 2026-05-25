@@ -1,0 +1,1466 @@
+/* ======================================================
+   HERO BUTTONS
+====================================================== */
+
+.heroButtons button {
+
+    padding:
+        0.8rem 1.3rem;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(0, 0, 0, 0.5);
+
+    color:
+        white;
+
+    backdrop-filter:
+        blur(10px);
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+}
+
+
+
+/* ======================================================
+   BUTTON HOVER
+====================================================== */
+
+.heroButtons button:hover {
+
+    transform:
+        scale(1.05);
+
+    background:
+        rgba(255,255,255,0.15);
+
+}
+
+
+
+/* ======================================================
+   HERO INFO CARD
+====================================================== */
+
+.heroInfoCard {
+
+    background:
+        rgba(0,0,0,0.45);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius:
+        24px;
+
+    padding:
+        2rem;
+
+    max-width:
+        400px;
+
+}
+
+
+
+/* ======================================================
+   HOTEL STARS
+====================================================== */
+
+.hotelStars {
+
+    color:
+        var(--gold-color);
+
+    margin-bottom:
+        1rem;
+
+}
+
+
+
+/* ======================================================
+   HERO TITLE
+====================================================== */
+
+.heroInfoCard h1 {
+
+    font-size:
+        2.5rem;
+
+    margin-bottom:
+        1rem;
+
+}
+
+
+
+/* ======================================================
+   ROOM CARD
+====================================================== */
+
+.roomCard {
+
+    min-width:
+        240px;
+
+    background:
+        #111827;
+
+    border-radius:
+        20px;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+
+    transition:
+        var(--transition);
+
+}
+
+
+
+/* ======================================================
+   ROOM CARD HOVER
+====================================================== */
+
+.roomCard:hover {
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+
+/* ======================================================
+   ROOM IMAGE
+====================================================== */
+
+.roomImage {
+
+    height:
+        320px;
+
+    object-fit: cover;
+
+}
+
+
+
+/* ======================================================
+   ROOM CONTENT
+====================================================== */
+
+.roomContent {
+
+    padding:
+        1rem;
+
+}
+
+
+
+.roomContent h3 {
+
+    font-size:
+        1.2rem;
+
+}
+
+
+
+/* ======================================================
+   HOTEL AREA CARD
+====================================================== */
+
+.hotelAreaCard {
+
+    background:
+        #111827;
+
+    border-radius:
+        24px;
+
+    overflow: hidden;
+
+    transition:
+        var(--transition);
+
+}
+
+
+
+/* ======================================================
+   HOTEL AREA CARD HOVER
+====================================================== */
+
+.hotelAreaCard:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+
+/* ======================================================
+   HOTEL AREA CONTENT
+====================================================== */
+
+.hotelAreaContent {
+
+    padding:
+        1.5rem;
+
+}
+
+
+
+/* ======================================================
+   HOTEL AREA TITLE
+====================================================== */
+
+.hotelAreaContent h3 {
+
+    margin-bottom:
+        1rem;
+
+}
+
+
+
+/* ======================================================
+   TAGS
+====================================================== */
+
+.hotelAreaTags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+
+    margin-top: 1.5rem;
+
+}
+
+
+
+.hotelAreaTags span {
+
+    background:
+        rgba(255,255,255,0.08);
+
+    padding:
+        0.5rem 0.9rem;
+
+    border-radius:
+        999px;
+
+    font-size:
+        0.85rem;
+
+}
+
+
+
+/* ======================================================
+   FOOTER TITLE
+====================================================== */
+
+.footerTitle h2 {
+
+    font-size:
+        2rem;
+
+}
+
+
+
+/* ======================================================
+   BTN LOCATION
+====================================================== */
+
+#btnLocation {
+
+    background:
+        linear-gradient(
+            90deg,
+            #facc15,
+            #f59e0b
+        );
+
+    color:
+        black;
+
+    font-weight: bold;
+
+    padding:
+        1rem 1.2rem;
+
+    border-radius:
+        16px;
+
+}
+
+
+
+/* ======================================================
+   CONTACT FORM INPUTS
+====================================================== */
+
+.contactForm input {
+
+    padding:
+        1rem;
+
+    border-radius:
+        14px;
+
+    background:
+        #1e293b;
+
+    color:
+        white;
+
+}
+
+
+
+/* ======================================================
+   BTN SEND
+====================================================== */
+
+.contactForm button {
+
+    padding:
+        1rem;
+
+    border-radius:
+        14px;
+
+    background:
+        white;
+
+    color:
+        black;
+
+    font-weight: bold;
+
+}
+
+/* ======================================================
+   LOGIN CARD
+====================================================== */
+
+.loginCard {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: white;
+
+    border-radius: 2rem;
+
+    padding: 2.5rem 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+}
+
+
+
+
+/* ======================================================
+   LOGIN TITLE
+====================================================== */
+
+.loginCard h1 {
+
+    font-size: 2rem;
+
+    text-align: center;
+
+    color: #111827;
+
+}
+
+
+
+
+/* ======================================================
+   LOGIN DESCRIPTION
+====================================================== */
+
+.loginCard p {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    line-height: 1.5;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+
+/* ======================================================
+   INPUTS
+====================================================== */
+
+.loginCard input {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    border: 1px solid #d1d5db;
+
+    outline: none;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+/* ======================================================
+   INPUT FOCUS
+====================================================== */
+
+.loginCard input:focus {
+
+    border-color: #111827;
+
+    box-shadow:
+        0 0 0 4px rgba(17, 24, 39, 0.08);
+
+}
+
+
+
+
+/* ======================================================
+   BTN SIGN IN
+====================================================== */
+
+#btnSignIn_dos {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border: none;
+
+    border-radius: 1rem;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 0.5rem;
+
+}
+
+
+
+
+/* ======================================================
+   BTN HOVER
+====================================================== */
+
+#btnSignIn_dos:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.92;
+
+}
+
+/* ======================================================
+   AUTH CARD
+====================================================== */
+
+.authCard {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: white;
+
+    border-radius: 1.5rem;
+
+    padding: 2rem;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.2rem;
+
+}
+
+
+
+
+
+/* ======================================================
+   TITLES
+====================================================== */
+
+.authCard h1 {
+
+    font-size: 2rem;
+
+    color: #1e293b;
+
+    text-align: center;
+
+}
+
+
+
+
+
+.authCard p {
+
+    text-align: center;
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.authForm {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+
+
+
+
+/* ======================================================
+   INPUTS
+====================================================== */
+
+.authForm input {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border-radius: 0.9rem;
+
+    border: 1px solid #dbe4ee;
+
+    outline: none;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.authForm input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12);
+
+}
+
+
+
+
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+.authForm button {
+
+    border: none;
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.authForm button:hover {
+
+    transform: translateY(-2px);
+
+    background: #1d4ed8;
+
+}
+
+
+
+
+
+/* ======================================================
+   REDIRECT
+====================================================== */
+
+.authRedirect {
+
+    font-size: 0.95rem;
+
+}
+
+
+
+
+
+.authRedirect a {
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+
+
+
+.authRedirect a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ======================================================
+   USER CONTAINER
+====================================================== */
+
+#userContainer {
+
+    background-color:
+        var(--white-color);
+
+    border-radius:
+        20px;
+
+}
+
+
+
+/* ======================================================
+   USER NAME
+====================================================== */
+
+#userContainer p {
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   USER BUTTONS
+====================================================== */
+
+#userContainer button {
+
+    padding:
+        10px 14px;
+
+    border-radius:
+        12px;
+
+}
+
+
+
+/* ======================================================
+   GO HOME BUTTON
+====================================================== */
+
+#btnGoHome {
+
+    background-color:
+        var(--gold-color);
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   LOG OUT BUTTON
+====================================================== */
+
+#btnLogOut {
+
+    background-color:
+        var(--primary-color);
+
+    color:
+        var(--white-color);
+
+}
+
+
+
+/* ======================================================
+   MAIN TITLE
+====================================================== */
+
+main h1 {
+
+    margin-bottom:
+        20px;
+
+}
+
+
+
+/* ======================================================
+   RESERVATION CARD
+====================================================== */
+
+.reservationCard {
+
+    background-color:
+        var(--white-color);
+
+    border-radius:
+        24px;
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   CANCEL BUTTON
+====================================================== */
+
+.cancelReservation {
+
+    margin-top:
+        10px;
+
+    padding:
+        14px;
+
+    border-radius:
+        14px;
+
+    background-color:
+        #dc2626;
+
+    color:
+        var(--white-color);
+
+}
+
+
+
+/* ======================================================
+   EMPTY MESSAGE
+====================================================== */
+
+#reservationsContainer h2 {
+
+    padding:
+        20px;
+
+    background-color:
+        var(--white-color);
+
+    border-radius:
+        20px;
+
+    color:
+        var(--primary-color);
+
+}
+
+/* ======================================================
+   CONTACT TITLE
+====================================================== */
+
+.contact-title {
+
+    font-size:
+        3.2rem;
+
+}
+
+
+
+/* ======================================================
+   CONTACT SUBTITLE
+====================================================== */
+
+.contact-subtitle {
+
+    padding:
+        24px;
+
+    background-color:
+        var(--secondary-color);
+
+    border:
+        1px solid var(--glass-border);
+
+    border-radius:
+        28px;
+
+    color:
+        var(--gray-color);
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        2;
+
+}
+
+
+
+/* ======================================================
+   MAP CONTAINER
+====================================================== */
+
+.map-container {
+
+    border-radius:
+        34px;
+
+    border:
+        1px solid var(--glass-border);
+
+}
+
+
+
+/* ======================================================
+   MAP
+====================================================== */
+
+.map-container iframe {
+
+    border:
+        none;
+
+}
+
+
+
+/* ======================================================
+   MAP BADGE
+====================================================== */
+
+.map-badge {
+
+    padding:
+        16px 22px;
+
+    border-radius:
+        22px;
+
+    background:
+        rgba(15, 23, 42, 0.9);
+
+    backdrop-filter:
+        blur(8px);
+
+    color:
+        var(--white-color);
+
+    font-weight:
+        bold;
+
+}
+
+
+
+/* ======================================================
+   CONTACT CARD
+====================================================== */
+
+.contact-card {
+
+    background-color:
+        var(--white-color);
+
+    border-radius:
+        34px;
+
+}
+
+
+
+/* ======================================================
+   CONTACT ICON
+====================================================== */
+
+.contact-icon {
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #bfdbfe
+        );
+
+    border-radius:
+        26px;
+
+    font-size:
+        2.2rem;
+
+}
+
+
+
+/* ======================================================
+   CONTACT CARD TITLE
+====================================================== */
+
+.contact-card h3 {
+
+    color:
+        var(--primary-color);
+
+    font-size:
+        1.8rem;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+
+/* ======================================================
+   CONTACT CARD TEXT
+====================================================== */
+
+.contact-card p {
+
+    color:
+        #475569;
+
+    font-size:
+        1.1rem;
+
+}
+
+/* ======================================================
+   FILTERS HERO
+====================================================== */
+
+.filtersHero p {
+
+    color:
+        var(--gray-color);
+
+}
+
+
+
+/* ======================================================
+   FILTERS FORM
+====================================================== */
+
+.filtersForm {
+
+    padding:
+        22px;
+
+    background-color:
+        var(--secondary-color);
+
+    border:
+        1px solid var(--glass-border);
+
+    border-radius:
+        28px;
+
+}
+
+
+
+/* ======================================================
+   FILTER LABELS
+====================================================== */
+
+.filterGroup label {
+
+    color:
+        var(--gray-color);
+
+}
+
+
+
+/* ======================================================
+   FILTER INPUTS
+====================================================== */
+
+.filterGroup input {
+
+    padding:
+        16px;
+
+    border-radius:
+        16px;
+
+    background-color:
+        var(--white-color);
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   SECTION TITLE
+====================================================== */
+
+.roomsSection h2 {
+
+    color:
+        var(--white-color);
+
+}
+
+
+
+/* ======================================================
+   EMPTY MESSAGE
+====================================================== */
+
+.emptyRoomsMessage {
+
+    padding:
+        24px;
+
+    background-color:
+        var(--secondary-color);
+
+    border:
+        1px solid var(--glass-border);
+
+    border-radius:
+        24px;
+
+    color:
+        var(--gray-color);
+
+    text-align:
+        center;
+
+}
+
+
+
+/* ======================================================
+   ROOM CARD
+====================================================== */
+
+.roomCard {
+
+    background-color:
+        var(--white-color);
+
+    border-radius:
+        28px;
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   ROOM TITLE
+====================================================== */
+
+.roomCard h2 {
+
+    color:
+        var(--primary-color);
+
+}
+
+
+
+/* ======================================================
+   ROOM TEXTS
+====================================================== */
+
+.roomCard p {
+
+    color:
+        #475569;
+
+}
+
+
+
+/* ======================================================
+   RESERVE BUTTON
+====================================================== */
+
+.reserve {
+
+    margin-top:
+        10px;
+
+    padding:
+        15px;
+
+    border-radius:
+        16px;
+
+    background-color:
+        var(--gold-color);
+
+    color:
+        var(--primary-color);
+
+    font-weight:
+        bold;
+
+}
+
+/* ======================================================
+   PAYING CARD
+====================================================== */
+
+.payingCard {
+
+    background-color: #f8fafc;
+
+}
+
+
+
+/* ======================================================
+   TITLE
+====================================================== */
+
+.payingTitle {
+
+    color: var(--primary-color);
+
+    font-size: 2.2rem;
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+/* ======================================================
+   DESCRIPTION
+====================================================== */
+
+.payingDescription {
+
+    color: #64748b;
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+
+}
+
+
+
+/* ======================================================
+   RESERVATION CARD
+====================================================== */
+
+.reservationCard {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+
+
+/* ======================================================
+   RESERVATION TITLE
+====================================================== */
+
+.reservationCard h2 {
+
+    color: var(--primary-color);
+
+    font-size: 1.7rem;
+
+    text-align: center;
+
+}
+
+
+
+/* ======================================================
+   RESERVATION TEXT
+====================================================== */
+
+.reservationCard p {
+
+    color: #334155;
+
+    background-color: #e2e8f0;
+
+    padding: 0.9rem 1rem;
+
+    border-radius: 1rem;
+
+    font-size: 0.95rem;
+
+}
+
+
+
+/* ======================================================
+   BUTTONS CONTAINER
+====================================================== */
+
+.buttonsContainer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+
+}
+
+
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.cancelPreReservation,
+.payReservation {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+}
+
+
+
+/* ======================================================
+   CANCEL BUTTON
+====================================================== */
+
+.cancelPreReservation {
+
+    background-color: #dc2626;
+
+    color: var(--white-color);
+
+}
+
+
+
+/* ======================================================
+   PAY BUTTON
+====================================================== */
+
+.payReservation {
+
+    background-color: #2563eb;
+
+    color: var(--white-color);
+
+}
+
+
+
+/* ======================================================
+   BUTTON HOVER
+====================================================== */
+
+.cancelPreReservation:hover,
+.payReservation:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+
+/* ======================================================
+   EMPTY STATE
+====================================================== */
+
+.reservationData h2 {
+
+    color: var(--primary-color);
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+.reservationData p {
+
+    color: #64748b;
+
+    text-align: center;
+
+}
+
+/* ======================================================
+   BTN RESERVE
+====================================================== */
+
+.btnReserve {
+
+    width: 100%;
+
+    margin-top: 1rem;
+
+    padding: 0.9rem 1rem;
+
+    border-radius: 1rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--gold-color),
+        #facc15
+    );
+
+    color: var(--primary-color);
+
+    font-size: 0.95rem;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 18px rgba(212, 175, 55, 0.25);
+
+}
+
+
+
+/* ======================================================
+   BTN RESERVE HOVER
+====================================================== */
+
+.btnReserve:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+
+}

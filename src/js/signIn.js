@@ -1,3 +1,62 @@
+const btnSignIn_dos =
+    document.getElementById("btnSignIn_dos");
+
+
+btnSignIn_dos.addEventListener("click", () => {
+
+    const userFound = verifCredentials();
+
+    // =========================
+    // VALIDAR USER
+    // =========================
+
+    if (!userFound) {
+
+        return;
+
+    }
+
+
+    // =========================
+    // USER NOW
+    // =========================
+
+    localStorage.setItem(
+        "userNow",
+        JSON.stringify(userFound)
+    );
+
+    // =========================
+    // ROLE
+    // =========================
+
+    const role =
+        roleVerification(userFound);
+
+
+    // =========================
+    // REDIRECCIONES
+    // =========================
+
+    if (role === "admin") {
+
+        alert("Bienvenido administrador")
+        window.location.href =
+        "admin.html";
+
+    }
+
+
+    if (role === "client") {
+
+        alert("Bienvenido usuario")
+        window.location.href =
+        "client.html";
+    }
+
+});
+
+
 function verifCredentials() {
 
     const identification =
@@ -56,7 +115,3 @@ function roleVerification(user) {
 }
 
 
-export {
-    verifCredentials,
-    roleVerification
-}

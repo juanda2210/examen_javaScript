@@ -1,6 +1,11 @@
 import {
     removeUserNow
-} from "../js/app.js"
+} from "../js/client.js"
+
+const userContainer =
+    document.getElementById(
+        "userContainer"
+    );
 
 const roomsContainer =
     document.getElementById("roomsContainer");
@@ -10,6 +15,131 @@ const reservationsContainer =
 
 const rooms =
     JSON.parse(localStorage.getItem("rooms")) || [];
+
+
+// =========================
+// RENDER USER CONTAINER
+// =========================
+
+function renderUserContainer() {
+
+    // =========================
+    // RENDER HTML
+    // =========================
+
+    userContainer.innerHTML = `
+
+        <div class="userActions">
+
+            <!-- =========================
+                 GO HOME
+            ========================== -->
+
+            <button
+
+                id="btnGoHome"
+
+                class="userButton"
+
+            >
+
+                Ir a inicio
+
+            </button>
+
+
+            <!-- =========================
+                 LOG OUT
+            ========================== -->
+
+            <button
+
+                id="btnLogOut"
+
+                class="userButton logoutButton"
+
+            >
+
+                Cerrar sesión
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    // =========================
+    // BTN GO HOME
+    // =========================
+
+    const btnGoHome =
+        document.getElementById(
+            "btnGoHome"
+        );
+
+
+    // =========================
+    // EVENT GO HOME
+    // =========================
+
+    btnGoHome.addEventListener(
+
+        "click",
+
+        () => {
+
+            // =========================
+            // REDIRECTION
+            // =========================
+
+            window.location.href =
+                "pag-01.html";
+
+        }
+
+    );
+
+
+    // =========================
+    // BTN LOG OUT
+    // =========================
+
+    const btnLogOut =
+        document.getElementById(
+            "btnLogOut"
+        );
+
+
+    // =========================
+    // EVENT LOG OUT
+    // =========================
+
+    btnLogOut.addEventListener(
+
+        "click",
+
+        () => {
+
+            // =========================
+            // REMOVE USER NOW
+            // =========================
+
+            removeUserNow();
+
+
+            // =========================
+            // REDIRECTION
+            // =========================
+
+            window.location.href =
+                "pag-01.html";
+
+        }
+
+    );
+
+}
 
 
 function renderRooms() {
@@ -23,20 +153,25 @@ function renderRooms() {
 
             <div class="roomCard">
 
-                <h2>${room.name}</h2>
+                <h2>${room.tipo}</h2>
 
                 <p>
                     Precio:
-                    ${room.price}
+                    ${room.precio}
                 </p>
 
                 <p>
-                    Capacidad:
-                    ${room.capacity}
+                    Capacidad máxima:
+                    ${room.capacidadMaxima}
                 </p>
 
                 <p>
-                    ${room.description}
+                    Capacidad minima:
+                    ${room.capacidadMinima}
+                </p>                
+
+                <p>
+                    ${room.descripcion}
                 </p>
 
                 <button
@@ -65,22 +200,27 @@ function openEditCard(index) {
 
             <input
                 id="roomName"
-                value="${room.name}"
+                value="${room.tipo}"
             >
 
             <input
                 id="roomPrice"
-                value="${room.price}"
+                value="${room.precio}"
             >
 
             <input
-                id="roomCapacity"
-                value="${room.capacity}"
+                id="roomCapacityMaxima"
+                value="${room.capacidadMaxima}"
+            >
+
+            <input
+                id="roomCapacityMinima"
+                value="${room.capacidadMinima}"
             >
 
             <textarea
                 id="roomDescription"
-            >${room.description}</textarea>
+            >${room.descripcion}</textarea>
 
             <button 
                 id="savingChanges"
@@ -133,28 +273,17 @@ document.addEventListener("click", (event) => {
         const roomPrice =
             document.getElementById("roomPrice").value;
 
-        const roomCapacity =
-            document.getElementById("roomCapacity").value;
-
-        const roomDescription =
-            document.getElementById("roomDescription").value;
-
 
         // =========================
         // SOBREESCRIBIR ROOMS
         // =========================
 
-        rooms[index].name =
+        rooms[index].tipo =
             roomName;
 
-        rooms[index].price =
+        rooms[index].precio =
             roomPrice;
 
-        rooms[index].capacity =
-            roomCapacity;
-
-        rooms[index].description =
-            roomDescription;
 
 
         // =========================
@@ -271,27 +400,9 @@ document.addEventListener("click", (event) => {
 
 });
 
-const btnLogOut =
-    document.getElementById("btnLogOut");
 
 
-btnLogOut.addEventListener("click", () => {
 
-    // =========================
-    // REMOVE USER
-    // =========================
-
-    removeUserNow();
-
-
-    // =========================
-    // REDIRECCIÓN
-    // =========================
-
-    window.location.href =
-        "index.html";
-
-});
 
 // =========================
 // RENDER RESERVATIONS

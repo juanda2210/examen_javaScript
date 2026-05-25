@@ -533,7 +533,7 @@ function renderRooms(
                     ${room.servicios.join(" • ")}
                 </p>
 
-                <button class="reserve" data-id="${room.id}>
+                <button class="reserve" data-id="${room.id}">
 
                 Reservar
 

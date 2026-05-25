@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
+
 <head>
+
+    <!-- =========================
+         META TAGS
+    ========================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- =========================
+         TITLE
+    ========================== -->
+
+    <title>
+        Admin Panel
+    </title>
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
 </head>
+
 <body>
-    <div id="roomsContainer"></div>
-    <script type="module" src="/src/js/admin.js"></script>
+
+
+    <!-- ======================================================
+         USER CONTAINER
+    ======================================================= -->
+
+    <div id="userContainer"></div>
+
+
+
+    <!-- ======================================================
+         MAIN
+    ======================================================= -->
+
+    <main>
+
+
+        <!-- ======================================================
+             ROOMS SECTION
+        ======================================================= -->
+
+        <section class="adminSection">
+
+
+            <!-- =========================
+                 TITLE
+            ========================== -->
+
+            <h1>
+                Habitaciones
+            </h1>
+
+
+            <!-- =========================
+                 ROOMS CONTAINER
+            ========================== -->
+
+            <div id="roomsContainer"></div>
+
+        </section>
+
+
+
+
+
+        <!-- ======================================================
+             RESERVATIONS SECTION
+        ======================================================= -->
+
+        <section class="adminSection">
+
+
+            <!-- =========================
+                 TITLE
+            ========================== -->
+
+            <h1>
+                Reservaciones
+            </h1>
+
+
+            <!-- =========================
+                 RESERVATIONS CONTAINER
+            ========================== -->
+
+            <div id="reservationsContainer"></div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- ======================================================
+         SCRIPT
+    ======================================================= -->
+
+    <script
+        type="module"
+        src="../js/admin.js"
+    ></script>
+
 </body>
+
 </html>

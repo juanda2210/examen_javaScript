@@ -1,0 +1,231 @@
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (min-width: 768px) {
+
+    /* ======================================================
+       AUTH
+    ====================================================== */
+
+    .authCard,
+    .payingCard {
+
+        max-width: 550px;
+
+        padding: 3rem 2.5rem;
+
+    }
+
+
+
+    /* ======================================================
+       USER CONTAINER
+    ====================================================== */
+
+    .userContainer {
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+    ====================================================== */
+
+    .filtersForm {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 1rem;
+
+    }
+
+
+
+    .filtersForm button,
+    .filtersForm .fullWidth {
+
+        grid-column: span 2;
+
+    }
+
+
+
+    /* ======================================================
+       ROOMS CONTAINER
+    ====================================================== */
+
+    .roomsContainer {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1.5rem;
+
+    }
+
+
+
+    /* ======================================================
+       ADMIN ROOMS
+    ====================================================== */
+
+    .adminRoomsContainer,
+    .adminReservationsContainer {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1.5rem;
+
+    }
+
+
+
+    /* ======================================================
+       CONTACT
+    ====================================================== */
+
+    .contact-info {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1.5rem;
+
+    }
+
+}
+
+
+
+
+
+/* ======================================================
+   DESKTOP
+====================================================== */
+
+@media (min-width: 1024px) {
+
+    /* ======================================================
+       GENERAL CONTAINERS
+    ====================================================== */
+
+    .authCard,
+    .payingCard {
+
+        max-width: 650px;
+
+    }
+
+
+
+    /* ======================================================
+       PAGE WRAPPERS
+    ====================================================== */
+
+    .clientPage,
+    .adminPage,
+    .filtersPage,
+    .payingPage {
+
+        padding: 3rem;
+
+    }
+
+
+
+    /* ======================================================
+       ROOMS CONTAINER
+    ====================================================== */
+
+    .roomsContainer {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+
+    /* ======================================================
+       ADMIN
+    ====================================================== */
+
+    .adminRoomsContainer,
+    .adminReservationsContainer {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+
+    /* ======================================================
+       CONTACT
+    ====================================================== */
+
+    .contact-page {
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+    }
+
+
+
+    .contact-info {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+
+    /* ======================================================
+       TITLES
+    ====================================================== */
+
+    .payingTitle,
+    .filtersTitle,
+    .clientTitle,
+    .adminTitle,
+    .contact-title {
+
+        font-size: 3rem;
+
+    }
+
+
+
+    /* ======================================================
+       ROOM CARDS
+    ====================================================== */
+
+    .roomCard {
+
+        transition: var(--transition);
+
+    }
+
+
+
+    .roomCard:hover {
+
+        transform: translateY(-5px);
+
+    }
+
+}

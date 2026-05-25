@@ -1,13 +1,3 @@
-import { 
-    saveRegisteredUser,
- } from "./signUp_toRegistro.js";
-
- import {
-    verifCredentials,
-    roleVerification
- } from "./signIn.js"
-
-
 const usersDefault = [
     {
         identification: 1097489524,
@@ -23,12 +13,13 @@ const usersDefault = [
 const infoRoomsDefault = [
     {
         "id": 1,
+        "ruta_imagen": "../images/estandar_king.jpeg",
         "tipo": "Estandar King",
         "cantidadDisponibles": 40,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "1",
-        "capacidadMaxima": "2",
+        "capacidadMinima": 1,
+        "capacidadMaxima": 2,
         "precio": 220000,
         "servicios": [
         "WiFi",
@@ -40,12 +31,13 @@ const infoRoomsDefault = [
 
     {
         "id": 2,
+        "ruta_imagen": "../images/estandar_double.jpeg",
         "tipo": "Estandar Double",
         "cantidadDisponibles": 40,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "2",
-        "capacidadMaxima": "4",
+        "capacidadMinima": 2,
+        "capacidadMaxima": 4,
         "precio": 340000,
         "servicios": [
         "WiFi",
@@ -57,12 +49,13 @@ const infoRoomsDefault = [
 
     {
         "id": 3,
+        "ruta_imagen": "../images/ejecutiva_king.jpeg",
         "tipo": "Ejecutiva King",
         "cantidadDisponibles": 30,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "1",
-        "capacidadMaxima": "2",
+        "capacidadMinima": 1,
+        "capacidadMaxima": 2,
         "precio": 420000,
         "servicios": [
         "WiFi",
@@ -74,12 +67,13 @@ const infoRoomsDefault = [
 
     {
         "id": 4,
+        "ruta_imagen": "../images/habitacion_premium.jpeg",
         "tipo": "Habitacion premium",
         "cantidadDisponibles": 30,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "2",
-        "capacidadMaxima": "3",
+        "capacidadMinima": 2,
+        "capacidadMaxima": 3,
         "precio": 520000,
         "servicios": [
         "WiFi",
@@ -91,12 +85,13 @@ const infoRoomsDefault = [
 
     {
         "id": 5,
+        "ruta_imagen": "../images/apart_hotel.jpeg",
         "tipo": "Apart Hotel",
         "cantidadDisponibles": 30,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "2",
-        "capacidadMaxima": "4",
+        "capacidadMinima": 2,
+        "capacidadMaxima": 4,
         "precio": 650000,
         "servicios": [
         "WiFi",
@@ -108,12 +103,13 @@ const infoRoomsDefault = [
 
     {
         "id": 6,
+        "ruta_imagen": "../images/suite_junior.jpeg",
         "tipo": "Junior Suite",
         "cantidadDisponibles": 40,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "2",
-        "capacidadMaxima": "3",
+        "capacidadMinima": 2,
+        "capacidadMaxima": 3,
         "precio": 780000,
         "servicios": [
         "WiFi",
@@ -125,12 +121,13 @@ const infoRoomsDefault = [
 
     {
         "id": 7,
+        "ruta_imagen": "../images/suite_familiar.jpeg",
         "tipo": "Suite Familiar",
         "cantidadDisponibles": 20,
         "descripcion": "Ideal para familias",
         "ubicacion": "Torre Sur",
-        "capacidadMinima": "4",
-        "capacidadMaxima": "6",
+        "capacidadMinima": 4,
+        "capacidadMaxima": 6,
         "precio": 1050000,
         "servicios": [
         "WiFi",
@@ -141,12 +138,13 @@ const infoRoomsDefault = [
 
     {
         "id": 8,
+        "ruta_imagen": "../images/suite_presidencial.jpeg",
         "tipo": "Suite Presidencial",
         "cantidadDisponibles": 20,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "4",
-        "capacidadMaxima": "6",
+        "capacidadMinima": 4,
+        "capacidadMaxima": 6,
         "precio": 2400000,
         "servicios": [
         "WiFi",
@@ -158,12 +156,13 @@ const infoRoomsDefault = [
 
     {
         "id": 9,
+        "ruta_imagen": "../images/habitacion_premium.jpeg",
         "tipo": "Habitacion Accesible",
         "cantidadDisponibles": 20,
         "descripcion": "Habitación amplia con vista al mar",
         "ubicacion": "Torre Norte",
-        "capacidadMinima": "1",
-        "capacidadMaxima": "2",
+        "capacidadMinima": 1,
+        "capacidadMaxima": 2,
         "precio": 240000,
         "servicios": [
         "WiFi",
@@ -211,17 +210,6 @@ function inicializarAvailability() {
     }
 }
 
-function removeUserNow() {
-
-    // =========================
-    // ELIMINAR USER NOW
-    // =========================
-
-    localStorage.removeItem(
-        "userNow"
-    );
-
-}
 
 
 inicializarUsersDefault();
@@ -229,82 +217,39 @@ inicializarRoomsDefault();
 inicializarAvailability();
 
 
-const btnSignUp =
-    document.getElementById("btnSignUp");
 
 
-btnSignUp.addEventListener("click", () => {
 
-    saveRegisteredUser();
+// =========================
+// BTN LOCATION
+// =========================
 
-});
-
-const btnSignIn =
-    document.getElementById("btnSignIn");
-
-
-btnSignIn.addEventListener("click", () => {
-
-    const userFound = verifCredentials();
-
-    // =========================
-    // VALIDAR USER
-    // =========================
-
-    if (!userFound) {
-
-        return;
-
-    }
-
-
-    // =========================
-    // USER NOW
-    // =========================
-
-    localStorage.setItem(
-        "userNow",
-        JSON.stringify(userFound)
+const btnLocation =
+    document.getElementById(
+        "btnLocation"
     );
 
-    // =========================
-    // ROLE
-    // =========================
-
-    const role =
-        roleVerification(userFound);
 
 
-    // =========================
-    // REDIRECCIONES
-    // =========================
 
-    if (role === "admin") {
+// =========================
+// EVENTO UBICACIÓN
+// =========================
 
-        window.location.href =
-        "admin.html";
+btnLocation.addEventListener(
 
-    }
+    "click",
 
+    () => {
 
-    if (role === "client") {
+        // =========================
+        // REDIRECCIÓN
+        // =========================
 
         window.location.href =
-        "client.html";
-    }
-
-});
-
-document.addEventListener("click", (event) => {
-
-    if (event.target.id === "btnLogOut") {
-
-        removeUserNow();
+            "pag-03.html";
 
     }
 
-});
+);
 
-export {
-    removeUserNow
-}

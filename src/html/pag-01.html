@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!-- =========================
+        META TAGS
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- =========================
+        TITLE
+    ========================== -->
+
+    <title>
+        Rincón del Carmen
+    </title>
+
+
+    <!-- =========================
+        CSS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ======================================================
+        HERO PRINCIPAL
+    ======================================================= -->
+
+    <section class="heroSection">
+
+        <!-- =========================
+            IMAGEN PRINCIPAL
+        ========================== -->
+
+        <img
+            src="../images/flayer_promocional.png"
+            alt="Hotel Rincón del Carmen"
+        >
+
+
+        <!-- =========================
+            OVERLAY HERO
+        ========================== -->
+
+        <div class="heroOverlay">
+
+
+            <!-- =========================
+                BOTONES SUPERIORES
+            ========================== -->
+
+            <div class="heroButtons">
+
+                <button id="btnSignUp">
+                    Registrarse
+                </button>
+
+                <button id="btnSignIn">
+                    Iniciar sesión
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                CARD FLOTANTE
+            ========================== -->
+
+            <div class="heroInfoCard">
+
+                <p class="hotelStars">
+                    ✦ Hotel 5 Estrellas
+                </p>
+
+                <h1>
+                    Rincón del Carmen
+                </h1>
+
+                <p>
+                    Vive una experiencia única
+                    de lujo y confort en el
+                    corazón del Caribe
+                    colombiano.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ======================================================
+        CARRUSEL HABITACIONES
+    ======================================================= -->
+
+    <section class="roomsSection">
+
+        <!-- =========================
+            TITULO
+        ========================== -->
+
+        <h2>
+            Nuestras Habitaciones
+        </h2>
+
+
+        <!-- =========================
+            CONTENEDOR WEB COMPONENTS
+        ========================== -->
+
+        <!--
+            Aquí vamos a renderizar
+            dinámicamente todas las
+            habitaciones desde
+            localStorage.rooms
+        -->
+
+        <div id="carruselHabitaciones">
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ======================================================
+        ÁREAS DEL HOTEL
+    ======================================================= -->
+
+    <section class="hotelAreasSection">
+
+        <!-- =========================
+            TITULO
+        ========================== -->
+
+        <h2>
+            Áreas del Hotel
+        </h2>
+
+
+        <!-- =========================
+            CONTENEDOR CARDS
+        ========================== -->
+
+        <div class="hotelAreasContainer">
+
+
+            <!-- ======================================================
+                CARD PISCINA
+            ======================================================= -->
+
+            <article class="hotelAreaCard">
+
+                <!-- =========================
+                    IMAGEN
+                ========================== -->
+
+                <img
+                    src="../images/piscina.jpeg"
+                    alt="Piscina del hotel"
+                >
+
+
+                <!-- =========================
+                    CONTENIDO
+                ========================== -->
+
+                <div class="hotelAreaContent">
+
+                    <h3>
+                        Piscina
+                    </h3>
+
+                    <p>
+                        Relájate en nuestra piscina
+                        con vista panorámica al mar.
+                    </p>
+
+
+                    <!-- =========================
+                        TAGS
+                    ========================== -->
+
+                    <div class="hotelAreaTags">
+
+                        <span>
+                            🏊 Acceso libre
+                        </span>
+
+                        <span>
+                            🌅 Vista al mar
+                        </span>
+
+                        <span>
+                            🌿 Zona de descanso
+                        </span>
+
+                        <span>
+                            🍹 Bar en piscina
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- ======================================================
+                CARD JACUZZI
+            ======================================================= -->
+
+            <article class="hotelAreaCard">
+
+                <!-- =========================
+                    IMAGEN
+                ========================== -->
+
+                <img
+                    src="../images/jacuzzi.jpeg"
+                    alt="Jacuzzi del hotel"
+                >
+
+
+                <!-- =========================
+                    CONTENIDO
+                ========================== -->
+
+                <div class="hotelAreaContent">
+
+                    <h3>
+                        Jacuzzi
+                    </h3>
+
+                    <p>
+                        Disfruta de una experiencia
+                        de relajación total en
+                        nuestro jacuzzi privado.
+                    </p>
+
+
+                    <!-- =========================
+                        TAGS
+                    ========================== -->
+
+                    <div class="hotelAreaTags">
+
+                        <span>
+                            ♨ Agua caliente
+                        </span>
+
+                        <span>
+                            🧖 Zona de spa
+                        </span>
+
+                        <span>
+                            🕯 Ambiente relajante
+                        </span>
+
+                        <span>
+                            🛁 Privado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- ======================================================
+                CARD COCINA
+            ======================================================= -->
+
+            <article class="hotelAreaCard">
+
+                <!-- =========================
+                    IMAGEN
+                ========================== -->
+
+                <img
+                    src="../images/cocina.jpeg"
+                    alt="Cocina del hotel"
+                >
+
+
+                <!-- =========================
+                    CONTENIDO
+                ========================== -->
+
+                <div class="hotelAreaContent">
+
+                    <h3>
+                        Cocina
+                    </h3>
+
+                    <p>
+                        Gastronomía de alta calidad
+                        preparada por nuestros chefs
+                        expertos.
+                    </p>
+
+
+                    <!-- =========================
+                        TAGS
+                    ========================== -->
+
+                    <div class="hotelAreaTags">
+
+                        <span>
+                            👨‍🍳 Chef profesional
+                        </span>
+
+                        <span>
+                            🍽 Menú variado
+                        </span>
+
+                        <span>
+                            🍱 Bufet
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ======================================================
+        FOOTER CONTACTO
+    ======================================================= -->
+
+    <footer class="contactFooter">
+
+
+        <!-- =========================
+            HEADER FOOTER
+        ========================== -->
+
+        <div class="footerHeader">
+
+            <div class="footerTitle">
+
+                <h2>
+                    ¿Quieres que te
+                    contactemos?
+                </h2>
+
+                <p>
+                    Déjanos tus datos y nos
+                    ponemos en contacto contigo.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                BOTÓN UBICACIÓN
+            ========================== -->
+
+            <button id="btnLocation">
+
+                📍 ¿Dónde nos ubicamos?
+
+            </button>
+
+        </div>
+
+
+
+
+
+        <!-- ======================================================
+            FORMULARIO CONTACTO
+        ======================================================= -->
+
+        <form class="contactForm">
+
+
+            <!-- =========================
+                INPUT NOMBRE
+            ========================== -->
+
+            <input
+                type="text"
+                placeholder="Tu nombre"
+            >
+
+
+            <!-- =========================
+                INPUT CIUDAD
+            ========================== -->
+
+            <input
+                type="text"
+                placeholder="Tu ciudad"
+            >
+
+
+            <!-- =========================
+                INPUT TELÉFONO
+            ========================== -->
+
+            <input
+                type="text"
+                placeholder="Tu teléfono"
+            >
+
+
+            <!-- =========================
+                INPUT CORREO
+            ========================== -->
+
+            <input
+                type="email"
+                placeholder="Tu correo"
+            >
+
+
+            <!-- =========================
+                BOTÓN ENVIAR
+            ========================== -->
+
+            <button type="button">
+
+                Enviar
+
+            </button>
+
+        </form>
+
+    </footer>
+
+
+
+
+
+    <!-- ======================================================
+        JS
+    ======================================================= -->
+
+    <script
+        type="module"
+        src="../js/app.js"
+    ></script>
+
+    <script src="../webComponents/pag-01.js"></script>
+
+
+</body>
+
+</html>
