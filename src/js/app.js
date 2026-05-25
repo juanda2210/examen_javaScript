@@ -1,3 +1,8 @@
+// =========================
+// DATOS INICIALES (DEFAULT)
+// =========================
+
+
 const usersDefault = [
     {
         identification: 1097489524,
@@ -173,6 +178,118 @@ const infoRoomsDefault = [
     }
 ];
 
+// =========================
+// TOMAR DOM ELEMENTS
+// =========================
+
+const heroButtons =
+    document.querySelector(
+        ".heroButtons"
+    );
+
+const btnLocation =
+    document.getElementById(
+        "btnLocation"
+    );
+
+// =========================
+// TOMAR KEYS DEL LOCALSTORAGE
+// =========================
+
+const userNow =
+    JSON.parse(
+        localStorage.getItem(
+            "userNow"
+        )
+    );
+
+
+// =========================
+// INITIALIZERS
+// =========================
+
+inicializarUsersDefault();
+inicializarRoomsDefault();
+inicializarAvailability();
+
+// =========================
+// RENDER FUNCTIONS
+// =========================
+
+renderUserButtons();
+
+
+// =========================
+// EVENTO UBICACIÓN
+// =========================
+
+btnLocation.addEventListener(
+
+    "click",
+
+    () => {
+
+        // =========================
+        // REDIRECCIÓN
+        // =========================
+
+        window.location.href =
+            "pag-03.html";
+
+    }
+
+);
+
+
+// =========================
+// EVENTOS
+// =========================
+
+document.addEventListener("click", (event) => {
+
+    // =========================
+    // LOG OUT
+    // =========================
+
+    if (event.target.id === "btnLogOut") {
+
+        localStorage.removeItem(
+            "userNow"
+        );
+
+        window.location.reload();
+
+    }
+
+
+
+
+    // =========================
+    // ADMIN PANEL
+    // =========================
+
+    if (event.target.id === "btnAdminPanel") {
+
+        window.location.href =
+            "admin.html";
+
+    }
+
+    // =========================
+    // CLIENT PANEL
+    // =========================
+
+    if (event.target.id === "btnClientPanel") {
+
+        window.location.href =
+            "client.html";
+
+    }
+
+});
+
+
+
 function inicializarUsersDefault() {
 
     if (!localStorage.getItem("users")) {
@@ -209,39 +326,6 @@ function inicializarAvailability() {
         );
     }
 }
-
-// =========================
-// HERO BUTTONS
-// =========================
-
-const heroButtons =
-    document.querySelector(
-        ".heroButtons"
-    );
-
-
-
-
-// =========================
-// USER NOW
-// =========================
-
-const userNow =
-    JSON.parse(
-        localStorage.getItem(
-            "userNow"
-        )
-    );
-
-
-
-inicializarUsersDefault();
-inicializarRoomsDefault();
-inicializarAvailability();
-renderUserButtons();
-
-
-
 
 
 
@@ -298,7 +382,27 @@ function renderUserButtons() {
 
                     <button id="btnAdminPanel">
 
-                        Admin
+                        Entrar en panel
+
+                    </button>
+
+                    `
+
+                    :
+
+                    ""
+
+                }
+
+                ${userNow.role === "client"
+
+                    ?
+
+                    `
+
+                    <button id="btnClientPanel">
+
+                        Entrar en panel
 
                     </button>
 
@@ -328,74 +432,3 @@ function renderUserButtons() {
     `;
 
 }
-
-
-// =========================
-// BTN LOCATION
-// =========================
-
-const btnLocation =
-    document.getElementById(
-        "btnLocation"
-    );
-
-
-
-
-// =========================
-// EVENTO UBICACIÓN
-// =========================
-
-btnLocation.addEventListener(
-
-    "click",
-
-    () => {
-
-        // =========================
-        // REDIRECCIÓN
-        // =========================
-
-        window.location.href =
-            "pag-03.html";
-
-    }
-
-);
-
-
-// =========================
-// EVENTOS USER
-// =========================
-
-document.addEventListener("click", (event) => {
-
-    // =========================
-    // LOG OUT
-    // =========================
-
-    if (event.target.id === "btnLogOut") {
-
-        localStorage.removeItem(
-            "userNow"
-        );
-
-        window.location.reload();
-
-    }
-
-
-
-
-    // =========================
-    // ADMIN PANEL
-    // =========================
-
-    if (event.target.id === "btnAdminPanel") {
-
-        window.location.href =
-            "admin.html";
-
-    }
-
-});
